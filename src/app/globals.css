@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --btn-bg-secondary: #5B7CFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-poppins: var(--font-poppins);
+  --font-vt323: var(--font-vt323);
+
+  @keyframes marquee-horizontal {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% / 3)); }
+  }
+  --animate-scroll: marquee-horizontal 15s linear infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Global */
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+@layer components{
+
+  .container-fluid{
+    @apply w-full
+  }
+  
+  .container-wrapper{
+    @apply max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16
+  }
+  
+  section{
+    @apply p-4 md:p-8 lg:p-16
+  }
+  
+  h1{
+    @apply text-5xl md:text-9xl font-light
+  }
+  
+  h2{
+    @apply text-[2.75rem] md:text-6xl
+  }
+  
+  h3{
+    @apply text-[2rem] md:text-5xl
+  }
+  
+  h4{
+    @apply text-2xl md:text-[2.5rem] 
+  }
+  
+  h5{
+    @apply text-lg md:text-[1.5rem]
+  }
+  
+  button{
+    @apply text-sm p-2 px-4 border border-gray-300 rounded-full hover:rounded-md cursor-pointer font-medium
+  }
+
+  p{
+    @apply text-gray-500
+  }
+}
