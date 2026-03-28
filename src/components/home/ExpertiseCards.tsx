@@ -2,7 +2,6 @@ import React from "react";
 import { MdDevices, MdStorage, MdCloudQueue, MdArchitecture } from "react-icons/md";
 import {
   SiHtml5,
-  SiCss,
   SiJavascript,
   SiReact,
   SiTailwindcss,
@@ -15,19 +14,53 @@ import {
   SiGithubactions,
   SiGraphql,
   SiRedis,
+  SiTypescript,
+  SiVite,
+  SiNextdotjs,
+  SiShadcnui,
+  SiBootstrap,
+  SiRedux,
+  SiAxios,
+  SiKotlin,
 } from "react-icons/si";
-import { FaAws } from "react-icons/fa6";
+import { FaAws, FaCss3 , FaSass, FaCode, FaJava, FaPython, FaRust} from "react-icons/fa6";
+import { TbBrandFramerMotion, TbBrandReactNative, TbSql } from "react-icons/tb";
 
 const expertiseData = [
+    {
+    title: "Languages",
+    categoryIcon: <FaCode size={22} />,
+    techStack: [
+      { icon: <SiJavascript />, color: "text-yellow-400" },
+      { icon: <SiTypescript />, color: "text-blue-500" },
+      { icon: <FaJava />, color: "text-[#ED8B00]" },
+      { icon: <FaPython />, color: "text-[#4B8BBE]" },
+      { icon: <FaRust />, color: "text-[#B7410E]" },
+      { icon: <SiKotlin />, color: "text-[#7F52FF]" },
+      { icon: <TbSql />, color: "text-[#F29111]" },
+    ],
+  },
   {
     title: "Frontend",
     categoryIcon: <MdDevices size={22} />,
     techStack: [
       { icon: <SiHtml5 />, color: "text-orange-500" },
-      { icon: <SiCss />, color: "text-blue-500" },
+      { icon: <FaCss3 />, color: "text-blue-500" },
       { icon: <SiJavascript />, color: "text-yellow-400" },
       { icon: <SiReact />, color: "text-cyan-400" },
+      { icon: <SiTypescript />, color: "text-blue-500" },
+      { icon: <TbBrandReactNative />, color: "text-[#61DBFB]" },
+
+      { icon: <SiVite />, color: "text-amber-500" },
       { icon: <SiTailwindcss />, color: "text-sky-400" },
+      { icon: <SiNextdotjs />, color: "text-foreground" },
+      { icon: <SiAxios />, color: "text-[#5A29E4]" },
+      { icon: <SiShadcnui />, color: "text-foreground" },
+      { icon: <SiBootstrap />, color: "text-blue-500" },
+      { icon: <TbBrandFramerMotion />, color: "text-yellow-300" },
+      { icon: <SiRedux />, color: "text-[#764ABC]" },
+      { icon: <FaSass />, color: "text-[#BF4080]" },
+
     ],
   },
   {
