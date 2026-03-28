@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, VT323 } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/header/NavBar";
+import ScrollProgressBar from "@/components/header/ScrollProgressBar";
 import { navItems } from "@/utils/navigation/navItems";
 
 const vt323 = VT323({
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${vt323.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-poppins">
+        <ScrollProgressBar />
         <NavBar navItems={navItems} />
         {children}
       </body>

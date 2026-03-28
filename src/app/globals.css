@@ -26,6 +26,22 @@
   }
 }
 
+@utility scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility scrollbar-default {
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
+  &::-webkit-scrollbar {
+    display: block;
+  }
+}
+
 /* Global */
 *{
   box-sizing: border-box;
