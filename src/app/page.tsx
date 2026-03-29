@@ -1,9 +1,10 @@
-import React from "react";
 import Hero from "@/components/home/Hero";
 import Expertise from "@/components/home/Expertise";
-import Avely from "@/components/home/Avely";
 import Experience from "@/components/home/Experience";
 import Approach from "@/components/home/Approach";
+import BentoGrid from "@/components/home/BentoGrid";
+import Project from "@/components/home/Project";
+import Footer from "@/components/footer/Footer";
 
 const Home = () => {
   return (
@@ -11,7 +12,10 @@ const Home = () => {
       <Hero />
       <Expertise />
       <Experience />
+      <Project />
       <Approach />
+      <BentoGrid />
+      <Footer />
     </div>
   );
 };

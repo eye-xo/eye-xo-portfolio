@@ -87,7 +87,7 @@ const Experience = () => {
             <motion.div
               variants={fadeUpSm}
               key={index}
-              className={`rounded-md flex flex-col md:flex-row-reverse md:items-center md:justify-between border border-slate-300 hover:bg-slate-50 
+              className={`rounded-md flex flex-col md:flex-row md:items-center md:justify-between border border-slate-300 hover:bg-slate-50 
             cursor-pointer hover:border-slate-400 py-4 px-5 md:px-8
             hover:dark:bg-slate-800 gap-2 md:gap-0 ${index == 0 && "bg-blue-50 dark:bg-blue-950"}`}
               whileHover={{ scale: 1.01, transition: { type: "spring", stiffness: 300, damping: 20 } }}

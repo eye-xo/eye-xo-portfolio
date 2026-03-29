@@ -1,7 +1,5 @@
 "use client";
-import React from "react";
 import Image from "next/image";
-import potraitImage from "@/assets/portfolio.png";
 import { motion } from "framer-motion";
 import { fadeUp, fadeIn, scaleIn, staggerContainer } from "@/utils/motion";
 
@@ -28,10 +26,11 @@ const Hero = () => {
       >
         <motion.div variants={scaleIn}>
           <Image
-            src={potraitImage}
+            src='https://ik.imagekit.io/rohitsahu5657/portfolio/portfolio.png'
             alt="Rohit portrait"
-            className="rounded-2xl w-40 h-auto md:w-auto"
-            height={280}
+            className="rounded-2xl w-auto md:h-[320px] h-[240px]"
+            height={240}
+            width={200}
             loading="eager"
           />
         </motion.div>
