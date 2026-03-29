@@ -46,17 +46,13 @@ const SlideToBook = () => {
   return (
     <div
       ref={trackRef}
-      className="
-        relative w-full max-w-sm h-16 rounded-full
-        bg-white/10 border border-white/20
-        flex items-center overflow-hidden
-        select-none
-      "
+      className="relative w-full max-w-sm h-16 rounded-full bg-black/10 dark:bg-white/10 border border-black/20 dark:border-white/20
+        flex items-center overflow-hidden select-none"
     >
       {/* Track label */}
       <motion.span
         style={{ opacity: trackOpacity }}
-        className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-white/80 pointer-events-none"
+        className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-foreground/80 pointer-events-none"
       >
         {unlocked ? "Opening Cal…" : "Slide to book a call →"}
       </motion.span>
@@ -102,7 +98,7 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="container-fluid bg-foreground text-background overflow-hidden">
+    <footer className="container-fluid text-foreground border-t-foreground/10 border-t overflow-hidden">
       {/* ── Hero CTA band ── */}
       <div className="container-wrapper py-16 md:py-24 flex flex-col md:flex-row items-center gap-8 text-center">
         <motion.div
@@ -112,8 +108,8 @@ const Footer = () => {
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="flex flex-col w-full items-center gap-4"
         >
-          <span className="text-xs font-semibold tracking-[0.3em] text-background/50 uppercase">Available for freelance</span>
-          <h2 className="font-bold leading-[1.1] max-w-3xl text-background">
+          <span className="text-xs font-semibold tracking-[0.3em] text-foreground/50 uppercase">Available for freelance</span>
+          <h2 className="font-bold leading-[1.1] max-w-3xl text-foreground">
             Let&apos;s connect
             <br className="hidden sm:block" /> now.
           </h2>
@@ -128,14 +124,14 @@ const Footer = () => {
           className="w-full flex flex-col items-center gap-4 justify-center px-4"
         >
           <SlideToBook />
-          <p className="text-background/60 max-w-md text-sm md:text-base">
+          <p className="text-foreground/60 max-w-md text-sm md:text-base">
             Got a project in mind, a role to fill, or just want to say hi? Book a 15-minute call and let&apos;s make it happen.
           </p>
         </motion.div>
       </div>
 
       {/* ── Divider ── */}
-      <div className="border-t border-background/10" />
+      <div className="border-t border-foreground/10" />
 
       {/* ── Quote band ── */}
       <div className="container-wrapper py-10 md:py-14 flex flex-col items-center text-center gap-3">
@@ -145,10 +141,14 @@ const Footer = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-background/90 leading-tight italic">
-            &ldquo;Jack of all skills,
+          <div className="flex flex-col md:flex-row gap-1">
+            <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground/90 leading-tight italic">&ldquo;Jack of all,</p>
+            <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground/90 leading-tight italic">master of none.&rdquo;</p>
+          </div>
+          {/* <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground/90 leading-tight italic">
+            &ldquo;Jack of all,
             <br /> master of none.&rdquo;
-          </p>
+          </p> */}
           {/* <cite className="block mt-4 text-xs text-background/40 not-italic tracking-widest uppercase">
             — Rohit Roshan Sahu
           </cite> */}
@@ -156,14 +156,14 @@ const Footer = () => {
       </div>
 
       {/* ── Divider ── */}
-      <div className="border-t border-background/10" />
+      <div className="border-t border-foreground/10" />
 
       {/* ── Bottom bar ── */}
       <div className="container-wrapper py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
         {/* Nav links */}
         <nav className="flex flex-wrap justify-center sm:justify-start gap-x-6 gap-y-2">
           {navLinks.map((l) => (
-            <a key={l.label} href={l.href} className="text-sm text-background/50 hover:text-background transition-colors">
+            <a key={l.label} href={l.href} className="text-sm text-foreground/50 hover:text-foreground transition-colors">
               {l.label}
             </a>
           ))}
@@ -181,7 +181,7 @@ const Footer = () => {
               whileHover={{ scale: 1.2, y: -2 }}
               whileTap={{ scale: 0.92 }}
               transition={{ type: "spring", stiffness: 300, damping: 18 }}
-              className="text-background/50 hover:text-background transition-colors text-lg"
+              className="text-foreground/50 hover:text-foreground transition-colors text-lg"
             >
               <Icon />
             </motion.a>
@@ -189,7 +189,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <p className="text-xs text-background/30">© {new Date().getFullYear()} Rohit Roshan Sahu</p>
+        <p className="text-xs text-foreground/30">© {new Date().getFullYear()} Rohit Roshan Sahu</p>
       </div>
     </footer>
   );

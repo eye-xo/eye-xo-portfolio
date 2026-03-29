@@ -21,7 +21,7 @@ const projectItems = [
   },
   {
     name: "Legal & BTC Wires",
-    summary: "Migrated from WordPress to Ghost CMS",
+    summary: "Built with Ghost CMS (Migrated from Wordpress)",
     image:
       "https://ik.imagekit.io/rohitsahu5657/portfolio/Legal%20and%20btc%20wires_P6P1We2n9",
     features: ["Web/App", "Ghost", "DevOps"],
